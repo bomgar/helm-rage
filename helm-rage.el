@@ -3,7 +3,7 @@
 ;; Copyright © 2016 Patrick Haun
 
 ;; Version: 0.0.1
-;; Package-Requires: ((helm "1.9.8") (emacs "24.4"))
+;; Package-Requires: ((helm "1.9.8") (emacs "24.4") (dash "2.13.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -25,6 +25,16 @@
 
 (require 'helm)
 (require 'helm-utils)
+(require 'dash)
+
+(defvar helm-rage-meme-dir nil)
+(setq helm-rage-meme-dir
+      (when load-file-name
+        (expand-file-name "meme" (file-name-directory load-file-name))))
+
+(defun helm-rage-get-memes ()
+  "Get all available memes"
+  (-filter (lambda (file-name) (s-ends-with? ".meme" file-name)) (directory-files helm-rage-meme-dir)))
 
 (provide 'helm-rage)
 

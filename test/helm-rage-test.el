@@ -1,4 +1,4 @@
 
-(ert-deftest helm-rage-test ()
-        (should (equal "a" "a")))
+(ert-deftest helm-rage-test-get-memes ()
+        (should (equal 1 (length (helm-rage-get-memes)))))
 

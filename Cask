@@ -10,6 +10,7 @@
  (depends-on "ert-runner")
  (depends-on "el-mock")
  (depends-on "ert-expectations")
+ (depends-on "dash")
  (depends-on "helm"))
 
 ;; Local Variables:
