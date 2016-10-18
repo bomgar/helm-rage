@@ -3,4 +3,4 @@
   [[https://travis-ci.org/bomgar/helm-rage][file:https://travis-ci.org/bomgar/helm-rage.svg?branch=master]]
   [[http://melpa.org/#/helm-rage][file:http://melpa.org/packages/helm-rage-badge.svg]]
 
-  A Helm source for raging.
+  A Helm source for raging. Allows you to spice up your commit message with rage comics or various memes.
