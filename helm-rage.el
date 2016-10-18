@@ -33,8 +33,13 @@
         (expand-file-name "meme" (file-name-directory load-file-name))))
 
 (defun helm-rage-get-memes ()
-  "Get all available memes"
+  "Get all available memes."
   (-filter (lambda (file-name) (s-ends-with? ".meme" file-name)) (directory-files helm-rage-meme-dir)))
+
+(defun helm-rage-meme-alist ()
+  "Gets the list of all memes with their name."
+  (-map (lambda (meme-file) (cons (replace-regexp-in-string "\.meme" "" (replace-regexp-in-string "_" " " meme-file)) meme-file)) (helm-rage-get-memes))
+  )
 
 (provide 'helm-rage)
 
