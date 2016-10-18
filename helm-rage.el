@@ -41,6 +41,24 @@
   (-map (lambda (meme-file) (cons (replace-regexp-in-string "\.meme" "" (replace-regexp-in-string "_" " " meme-file)) meme-file)) (helm-rage-get-memes))
   )
 
+(defun helm-rage-source ()
+  "Builds the helm rage source."
+
+  (helm-build-sync-source "memes"
+    :candidates (helm-rage-meme-alist)
+    :action '(("Insert meme" . helm-rage-insert-meme))))
+
+(defun helm-rage-insert-meme (candidate)
+  "Insert the CANDIDATE in the current buffer."
+  (insert-file-contents (expand-file-name candidate helm-rage-meme-dir)))
+
+;;;###autoload
+(defun helm-rage ()
+  "Precofigured `helm' for looking up memes by name."
+  (interactive)
+  (helm :sources (helm-rage-source)
+        :buffer "*helm-rage-search*"))
+
 (provide 'helm-rage)
 
 ;;; helm-rage.el ends here
