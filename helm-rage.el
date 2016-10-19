@@ -3,7 +3,7 @@
 ;; Copyright © 2016 Patrick Haun
 
 ;; Version: 0.0.1
-;; Package-Requires: ((helm "1.9.8") (emacs "24.4") (dash "2.13.0"))
+;; Package-Requires: ((helm "1.9.8") (emacs "24.4") (dash "2.13.0")(s "1.11.0"))
 ;; Keywords: helm, rage, meme
 ;; URL: https://github.com/bomgar/helm-rage
 
