@@ -1,4 +1,3 @@
-
 (source gnu)
 (source melpa)
 
@@ -11,6 +10,7 @@
  (depends-on "el-mock")
  (depends-on "ert-expectations")
  (depends-on "dash")
+ (depends-on "s")
  (depends-on "helm"))
 
 ;; Local Variables:

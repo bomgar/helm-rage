@@ -15,6 +15,7 @@
 (require 'helm)
 (require 'helm-utils)
 (require 'dash)
+(require 's)
 
 (defvar helm-rage-meme-dir nil)
 (setq helm-rage-meme-dir
@@ -27,7 +28,7 @@
 
 (defun helm-rage-meme-alist ()
   "Gets the list of all memes with their name."
-  (-map (lambda (meme-file) (cons (replace-regexp-in-string "\.meme" "" (replace-regexp-in-string "_" " " meme-file)) meme-file)) (helm-rage-get-memes)))
+  (-map (lambda (meme-file) (cons (replace-regexp-in-string "\\.meme" "" (replace-regexp-in-string "_" " " meme-file)) meme-file)) (helm-rage-get-memes)))
 
 (defun helm-rage-source ()
   "Builds the helm rage source."
