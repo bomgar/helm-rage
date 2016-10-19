@@ -4,3 +4,8 @@
   [[http://melpa.org/#/helm-rage][file:http://melpa.org/packages/helm-rage-badge.svg]]
 
   A Helm source for raging. Allows you to spice up your commit message with rage comics or various memes.
+
+** Usage
+   #+BEGIN_SRC
+   M-x helm-rage
+   #+END_SRC
