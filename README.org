@@ -10,3 +10,8 @@
    #+BEGIN_SRC
    M-x helm-rage
    #+END_SRC
+
+   
+** Demo
+
+   [[file://demo.gif]]
