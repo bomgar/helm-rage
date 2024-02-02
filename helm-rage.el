@@ -1,4 +1,4 @@
-;;; helm-rage.el --- Helm command for rage characters.
+;;; helm-rage.el --- Helm command for rage characters. -*- lexical-binding: t; -*-
 
 ;; Copyright © 2016 Patrick Haun
 
